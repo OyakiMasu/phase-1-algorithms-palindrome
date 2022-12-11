@@ -1,37 +1,32 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-
- word = "racecar";
- word = "robot"
-
- if(word = isPalindrome){
-      word= "racecar";
-         return true
- } else {
-      word = "robot";
-  return false
- }
+function reverseString(word) {
+  // create an array from the input string
+  const wordArray = word.split("");
+  // reverse the array
+  const reversedWordArray = wordArray.reverse();
+  // create a string from the reversed array
+  const reversedWord = reversedWordArray.join("");
+  // return the reversed string
+  return reversedWord;
 }
 
+function isPalindrome(word) {
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  // if the reversed string is the same as the input
+  if (word === reversedWord) {
+    return true;
+  } else {
+    return false;
+  }
+}
 /* 
   Add your pseudocode here
-  If the words read the same forwards and backwards it should run true
-  And vice verser false
-  In order to start we will give the word key a string eg
-       let word = "racecar"
-    Then give it am if statement of if it is a palindrome 
-        return true 
-      and if it isn't run 
-        return false
+
 */
 
 /*
   Add written explanation of your solution here
-  let word = "racecar"
-  if(word = 'isPalindrome'){
-    return true
-  }else{
-    return false
+
   }
 */
 
